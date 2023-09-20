@@ -2,6 +2,10 @@
 ukagakaPlugin_SendTamiyasuTalkは、VOICEROID2など合成音声ソフトで、外部連携APIを持たないものを使用するために作成されました。<br>
 [民安Talk](https://publish-tool.blogspot.com/2012/09/voiceroid-live-gear2ch-niconama-comment.html)を使用してゴーストの発言を読み上げます。<br>
 
+類似プラグインとしてCeVIO AI専用のプラグインを作っています。
+CeVIOを所持している場合はそちらをお勧めします。
+
+
 
 
 |項目|CeVIO AI Talker V2のメリット|SendTaymiyasuTalkのメリット|
