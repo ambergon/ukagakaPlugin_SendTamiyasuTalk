@@ -39,7 +39,7 @@ utf-8で編集してください。<br>
 
 
 #### 民安トークのパスを設定する。
-絶対パスで指定してください。<br>
+config.ukaを編集して絶対パスで指定してください。<br>
 ```{ .config.uka }
 //例
 TamiyasuTalkPATH = 'C:\Users\yourName\Documents\exe\tamiyasu_talk\vrx.exe'
@@ -48,6 +48,7 @@ TamiyasuTalkPATH = 'C:\Users\yourName\Documents\exe\tamiyasu_talk\vrx.exe'
 
 #### テキストを特定のキャラクターで読み上げる。
 ￥1・￥0をそれぞれ置換する機能があります。<br>
+同じくconfig.ukaの中を編集してください。<br>
 ```{ .config.uka }
 //Defaultの\0 -> A \1 -> BにそれぞれVOICEROIDで使用する接頭辞に置換できます。
 //下記のようにすれば、VOICEROID2にインポートしたVOICEROID+のデフォルトを呼ぶことができます。
