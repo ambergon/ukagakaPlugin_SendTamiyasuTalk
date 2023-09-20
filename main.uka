@@ -1,0 +1,122 @@
+
+version {
+	"origin/1.0"
+}
+
+OnMenuExec {
+}
+
+//ゴーストが喋るときの設定
+OnOtherGhostTalk {
+    FUNCTIONEX("./dll/proxy_ex.dll" ,  "/charset" , "UTF-8"  )
+    _Script        = reference[4]
+    _GhostMenuName = reference[0]
+    _VoiceText     = TalkText( _Script , _GhostMenuName )
+    _Check         = REPLACE( _VoiceText, ' ' , "" )
+    _Check         = REPLACE( _Check, '' , "" )
+    if _Check != "" {
+        _devnull = EXECUTE( TamiyasuTalkPATH , _VoiceText  )
+    }
+}
+
+
+TalkText {
+    _text   = _argv[0]
+    _Name   = _argv[1]
+
+    //_text         = RE_REPLACE( _text , '' , "" )
+
+    if ISVAR( _Name + ".TalkerA" ) == 1 && ISVAR( _Name + ".TalkerB" ) == 1 {
+        EVAL( "_A = %(_Name).TalkerA" )
+        EVAL( "_B = %(_Name).TalkerB" )
+        //EVAL("MouseDoubleClick_%( _CharID )%( _Parts )")
+        _text       = RE_REPLACE( _text  , '\\0' , "" + _A )
+        _text       = RE_REPLACE( _text  , '\\h' , "" + _A )
+        _text       = RE_REPLACE( _text  , '\\1' , "" + _B )
+        _text       = RE_REPLACE( _text  , '\\u' , "" + _B )
+
+
+    } else {
+        _text       = RE_REPLACE( _text  , '\\0' , "" + TalkerA )
+        _text       = RE_REPLACE( _text  , '\\h' , "" + TalkerA )
+        _text       = RE_REPLACE( _text  , '\\1' , "" + TalkerB )
+        _text       = RE_REPLACE( _text  , '\\u' , "" + TalkerB )
+    }
+
+
+    //サクラスクリプト除去
+    _text         = RE_REPLACE( _text  , '\\__.\[.*?\]' , "" )
+    _text         = RE_REPLACE( _text  , '\\_.\[.*?\]' , "" )
+    _text         = RE_REPLACE( _text  , '\\_.' , "" )
+    _text         = RE_REPLACE( _text  , '\\.\[.*?\]' , "" )
+    _text         = RE_REPLACE( _text  , '\\w[0-9]' , "" )
+
+    _text         = RE_REPLACE( _text  , '\\n' , "" )
+    _text         = RE_REPLACE( _text  , '\\.' , "" )
+
+    _text         = REPLACE( _text  , '　' ,  " " )
+    _text         = REPLACE( _text  , '？' , '?' )
+    _text         = REPLACE( _text  , '！' , '!' )
+
+    //_text         = REPLACE( _text  , '(' , "" )
+    //_text         = REPLACE( _text  , ')' , "" )
+    //_text         = REPLACE( _text  , '（' , "" )
+    //_text         = REPLACE( _text  , '）' , "" )
+    //_text         = REPLACE( _text  , '「' , "" )
+    //_text         = REPLACE( _text  , '」' , "" )
+    //_text         = REPLACE( _text  , '【' , "" )
+    //_text         = REPLACE( _text  , '】' , "" )
+    _text         = REPLACE( _text  , '????' , "?" )
+    _text         = REPLACE( _text  , '???' , "?" )
+    _text         = REPLACE( _text  , '??' , "?" )
+    _text         = REPLACE( _text  , '!!!!' , "!" )
+    _text         = REPLACE( _text  , '!!!' , "!" )
+    _text         = REPLACE( _text  , '!!' , "!" )
+    _text         = REPLACE( _text  , '…………………' , "…" )
+    _text         = REPLACE( _text  , '………………' , "…" )
+    _text         = REPLACE( _text  , '……………' , "…" )
+    _text         = REPLACE( _text  , '…………' , "…" )
+    _text         = REPLACE( _text  , '………' , "…" )
+    _text         = REPLACE( _text  , '……' , "…" )
+    _text         = REPLACE( _text  , '、、、、、、' , "、" )
+    _text         = REPLACE( _text  , '、、、、、' , "、" )
+    _text         = REPLACE( _text  , '、、、、' , "、" )
+    _text         = REPLACE( _text  , '、、、' , "、" )
+    _text         = REPLACE( _text  , '、、' , "、" )
+    _text         = REPLACE( _text  , '・・・・・・・' , "・" )
+    _text         = REPLACE( _text  , '・・・・・・' , "・" )
+    _text         = REPLACE( _text  , '・・・・・' , "・" )
+    _text         = REPLACE( _text  , '・・・・' , "・" )
+    _text         = REPLACE( _text  , '・・・' , "・" )
+    _text         = REPLACE( _text  , '・・' , "・" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。。' , "。" )
+    _text         = REPLACE( _text  , '。。。' , "。" )
+    _text         = REPLACE( _text  , '。。' , "。" )
+
+    _text         = REPLACE( _text  , '*?' , "?" )
+    _text         = REPLACE( _text  , '!?!?' , '!?' )
+    _text         = REPLACE( _text  , '?!?!' , '?!' )
+
+    _text         = REPLACE( _text  , '～' , 'ー' )
+    _text
+}
+
+
+
+
+
+
+
+

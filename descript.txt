@@ -1,0 +1,15 @@
+Charset,UTF-8
+readme.charset,UTF-8
+readme.readme.md
+type,plugin
+name,SendTamiyasuTalk
+craftman,ambergon
+filename,yaya.dll
+
+id,df329bb6-db2f-766f-69cc-c4da25b44f4a
+
+secondchangeinterval,0
+otherghosttalk,before
+
+//更新url
+//homeurl,

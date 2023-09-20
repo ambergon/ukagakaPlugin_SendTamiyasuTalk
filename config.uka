@@ -1,0 +1,14 @@
+
+//VOICEROID2におけるdefaultのボイスプリセットタグは>
+//私は:に変更している。
+OnPluginLoad.Config {
+    TamiyasuTalkPATH = 'C:\Users\foxgo\Documents\exe\tamiyasu_talk\vrx.exe'
+    //TalkerA = "東北きりたん(v1):"
+    //TalkerB = "民安ともえ(v1):"
+    TalkerA = "結月ゆかり:"
+    TalkerB = ""
+    静かな団欒.TalkerA = "結月ゆかり:"
+    静かな団欒.TalkerB = "結月ゆかり:"
+}
+
+
