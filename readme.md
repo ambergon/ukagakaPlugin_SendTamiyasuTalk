@@ -16,7 +16,7 @@ CeVIOを所持している場合はそちらをお勧めします。
 |新しいテキストが来たとき|現在のトークを切り上げて新しいテキストを読み上げる。|今のテキストを読み上げ終わった後に新しいテキストを読み上げる。|
 |英文切り替え機能|送られたテキストが英文のみの場合CeVIO AI 弦巻マキ(英)に切り替えることができる|対応予定なし。|
 |コスト|非常に高い。初回はトークスターター(本体+トークボイス)が必要になる。DLsiteでクーポンを使っても一万は超えるだろう。以降はトークボイスのみで済むので5-8千円くらい。質はとても良い。|VOICEVOXにも対応しているのでコストがかからない。素晴らしい。|
-|リンク| [GitHub - ambergon/ukagakaPlugin_CeVIO-TalkerV2](https://github.com/ambergon/ukagakaPlugin_CeVIO-TalkerV2) |ここ|
+|リンク| [GitHub - ambergon/ukagakaPlugin_CeVIO-TalkerV2](https://github.com/ambergon/ukagakaPlugin_CeVIO-TalkerV2) |[Releases · ambergon/ukagakaPlugin_SendTamiyasuTalk · GitHub](https://github.com/ambergon/ukagakaPlugin_SendTamiyasuTalk/releases)|
 ||||
 
 
