@@ -3,15 +3,18 @@ ukagakaPlugin_SendTamiyasuTalkは、VOICEROID2など合成音声ソフトで、�
 [民安Talk](https://publish-tool.blogspot.com/2012/09/voiceroid-live-gear2ch-niconama-comment.html)を使用してゴーストの発言を読み上げます。<br>
 
 
-## メリット
-民安Talkは多くの合成音声ソフトに対応しているため、大体のものは使えます。<br>
-私はこのプラグインではVOICEROID2しか使用していませんが、きちんと設定すれば複数の音声合成ソフトをまたいで使うこともできるかもしれません。<br>
+
+|項目|CeVIO AI Talker V2のメリット|SendTaymiyasuTalkのメリット|
+|:--:|:--:|:--:|
+|使用できる合成音声ソフト|CeVIO AIのみ|多くのものが使える。|
+|1セットのゴーストに対して|3人まで声を充てることができる。|2人まで。|
+|必要なウィンドウの数|SSP + ゴースト だけ| SSP + ゴースト + 民安Talk|
+|新しいテキストが来たとき|現在のトークを切り上げて新しいテキストを読み上げる。|今のテキストを読み上げ終わった後に新しいテキストを読み上げる。|
+|リンク| [GitHub - ambergon/ukagakaPlugin_CeVIO-TalkerV2](https://github.com/ambergon/ukagakaPlugin_CeVIO-TalkerV2) |ここ|
 
 
-## デメリット
-専用設計ではなく、投げられたテキストをすべて順番に再生してしまうので、Ctrlキーなどを使って大量のテキストを読んだ場合、<br>
-いつまでも音声の再生が続くことになります。<br>
-[GitHub - ambergon/ukagakaPlugin_CeVIO-TalkerV2](https://github.com/ambergon/ukagakaPlugin_CeVIO-TalkerV2)の場合は再生を中断して新しいテキストに切り替え・処理しきれないテキストのカットなどを実装しているので、CeVIO AIだけを使用する場合はこちらをお勧めします。<br>
+投げられたテキストをすべて順番に再生してしまうので、Ctrlキーなどを使って大量のテキストを読んだ場合、<br>
+いつまでも音声の再生が続くデメリットが大きいです。<br>
 
 
 ## 動作環境
